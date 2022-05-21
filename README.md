@@ -1,9 +1,6 @@
-# GODOT Template Project
+# Save My Earth
 
-## To Do (maybe)
+## Credits
 
-- audio manager
-- settings manager
-- controls remapper
-
-https://github.com/velopman/godot-template/tree/main/source/autoloads
+- Kenney.nl - UI assets and sound effects
+- [azagaya](https://azagaya.itch.io/kenneys-ui-theme) - Kenney's UI Theme for Godot
