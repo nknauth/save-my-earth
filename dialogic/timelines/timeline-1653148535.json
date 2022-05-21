@@ -1,0 +1,67 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1653099004.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1653099004.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi! I'm Dr. Sustain!\nI'm here to help you learn about sustainability!"
+		},
+		{
+			"animation": "[No Animation]",
+			"animation_length": 0,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_position": true,
+			"change_z_index": false,
+			"character": "character-1653099004.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"character": "character-1653099004.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is Earthville! It's the town where we all live.\nOr at least, this is what it used to look like."
+		},
+		{
+			"change_scene": "res://scenes/overworld/town_map_poluted.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653148535.json",
+		"name": "game_intro"
+	}
+}

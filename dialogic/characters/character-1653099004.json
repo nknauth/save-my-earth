@@ -1,0 +1,21 @@
+{
+	"color": "#ff2de68b",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1653099004.json",
+	"mirror_portraits": false,
+	"name": "Dr. Sustain",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://scenes/apartment/images/dr_sustain.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ui/recycling_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/overworld/Buildings.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/overworld/images/plastic-bottle.png" type="Texture" id=3]
+[ext_resource path="res://scenes/overworld/images/plastic-bag.png" type="Texture" id=4]
+[ext_resource path="res://scenes/overworld/images/zombie.png" type="Texture" id=5]
+[ext_resource path="res://scenes/overworld/images/earthville-dirty-background.png" type="Texture" id=6]
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=7]
+
+[node name="TownMapPolluted" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 36, -4 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WelcomeLabel" type="RichTextLabel" parent="UI"]
+modulate = Color( 0.180392, 0.8, 0.443137, 1 )
+margin_left = 36.0
+margin_top = 39.0
+margin_right = 519.0
+margin_bottom = 181.0
+bbcode_enabled = true
+bbcode_text = "Welcome to Earthville!"
+text = "Welcome to Earthville!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buildings" parent="." instance=ExtResource( 2 )]
+
+[node name="Zombies" type="Node2D" parent="."]
+
+[node name="Zombie" type="Sprite" parent="Zombies"]
+position = Vector2( 366, 393 )
+texture = ExtResource( 5 )
+
+[node name="Zombie2" type="Sprite" parent="Zombies"]
+position = Vector2( 712, 274 )
+texture = ExtResource( 5 )
+
+[node name="Zombie3" type="Sprite" parent="Zombies"]
+position = Vector2( 446, 193 )
+texture = ExtResource( 5 )
+
+[node name="Zombie4" type="Sprite" parent="Zombies"]
+position = Vector2( 707, 492 )
+texture = ExtResource( 5 )
+
+[node name="Trash" type="Node2D" parent="."]
+
+[node name="Plastic_bag" type="Sprite" parent="Trash"]
+position = Vector2( 179, 204 )
+texture = ExtResource( 4 )
+
+[node name="Plastic_bag2" type="Sprite" parent="Trash"]
+position = Vector2( 710, 110 )
+rotation = -0.376784
+texture = ExtResource( 4 )
+
+[node name="Plastic_bag3" type="Sprite" parent="Trash"]
+position = Vector2( 574, 285 )
+rotation = 0.440408
+texture = ExtResource( 4 )
+
+[node name="Plastic_bottle" type="Sprite" parent="Trash"]
+position = Vector2( 293, 482 )
+texture = ExtResource( 3 )
+
+[node name="Plastic_bottle2" type="Sprite" parent="Trash"]
+position = Vector2( 949, 220 )
+rotation = 0.209283
+texture = ExtResource( 3 )
+
+[node name="Plastic_bottle3" type="Sprite" parent="Trash"]
+position = Vector2( 448, 312 )
+rotation = -0.613436
+texture = ExtResource( 3 )
+
+[node name="Dialog" parent="." instance=ExtResource( 7 )]
+timeline = "timeline-1653149338.json"

@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/apartment/images/apartment_large.png" type="Texture" id=2]
+[ext_resource path="res://scenes/apartment/images/lee_and_marco.png" type="Texture" id=3]
+[ext_resource path="res://scenes/apartment/ApartmentSelectionButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/apartment/images/college_roomies.png" type="Texture" id=5]
+[ext_resource path="res://scenes/apartment/apartment_interior/ApartmentFloor1.tscn" type="PackedScene" id=6]
+
+[node name="Apartment" type="Node2D"]
+
+[node name="Dr_Sustain_Dialog" parent="." instance=ExtResource( 1 )]
+timeline = "timeline-1653099112.json"
+
+[node name="ApartmentSprite" type="Sprite" parent="."]
+position = Vector2( 241, 327 )
+texture = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 1024, 600 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_left = 552.0
+margin_top = 16.0
+margin_right = 974.0
+margin_bottom = 594.0
+
+[node name="JacksonsButton" parent="Control/VBoxContainer" instance=ExtResource( 4 )]
+next_scene = ExtResource( 6 )
+
+[node name="RoomiesButton" parent="Control/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 194.0
+margin_bottom = 384.0
+texture_normal = ExtResource( 5 )
+
+[node name="LeeAndMarcoButton" parent="Control/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 388.0
+margin_bottom = 578.0
+texture_normal = ExtResource( 3 )

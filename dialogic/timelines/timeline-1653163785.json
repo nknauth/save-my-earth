@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1653099004.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1653099004.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Welcome to the first floor. This is where the Jackson family lives. They have a mom, a dad, a grandpa, and three kids."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1653163785.json",
+		"name": "apartment_floor_1"
+	}
+}

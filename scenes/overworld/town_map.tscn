@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/recycling_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/overworld/Buildings.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/overworld/images/earthville-clean-background.png" type="Texture" id=3]
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=4]
+
+[node name="TownMap" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 36, -4 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WelcomeLabel" type="RichTextLabel" parent="UI"]
+modulate = Color( 0.180392, 0.8, 0.443137, 1 )
+margin_left = 36.0
+margin_top = 39.0
+margin_right = 519.0
+margin_bottom = 181.0
+bbcode_enabled = true
+bbcode_text = "Welcome to Earthville!"
+text = "Welcome to Earthville!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buildings" parent="." instance=ExtResource( 2 )]
+
+[node name="Dialog_game_intro" parent="." instance=ExtResource( 4 )]
+timeline = "timeline-1653148535.json"
