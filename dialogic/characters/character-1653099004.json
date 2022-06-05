@@ -13,7 +13,7 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://scenes/apartment/images/dr_sustain.png"
+			"path": "res://characters/images/dr_sustain.png"
 		}
 	],
 	"scale": 100,

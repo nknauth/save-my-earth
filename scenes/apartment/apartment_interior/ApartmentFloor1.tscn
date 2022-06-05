@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ui/hud/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/fonts/arial_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://entities/SlideGroup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/images/dr_sustain.png" type="Texture" id=5]
+[ext_resource path="res://ui/arial_text_theme.tres" type="Theme" id=6]
+[ext_resource path="res://scenes/apartment/images/un-logo.jpg" type="Texture" id=7]
+[ext_resource path="res://scenes/apartment/images/sustainability-venn-diagram.png" type="Texture" id=8]
+
+[sub_resource type="StyleBoxLine" id=1]
+thickness = 2
 
 [node name="ApartmentFloor1" type="Node2D"]
 
@@ -9,3 +18,471 @@
 timeline = "timeline-1653163785.json"
 
 [node name="HUD" parent="." instance=ExtResource( 2 )]
+
+[node name="SlideGroup" parent="." instance=ExtResource( 4 )]
+
+[node name="Slide0" type="Control" parent="SlideGroup"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 400.0
+theme = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SlideGroup/Slide0"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SlideGroup/Slide0/MarginContainer"]
+margin_right = 984.0
+margin_bottom = 440.0
+
+[node name="Title" type="Label" parent="SlideGroup/Slide0/MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 3 )
+text = "GAME INSTRUCTION"
+
+[node name="HSeparator" type="HSeparator" parent="SlideGroup/Slide0/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 984.0
+margin_bottom = 36.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlideGroup/Slide0/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 440.0
+custom_constants/separation = 0
+
+[node name="MainText" type="RichTextLabel" parent="SlideGroup/Slide0/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 700.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 700, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "main text goes here"
+text = "main text goes here"
+
+[node name="TextureRect" type="TextureRect" parent="SlideGroup/Slide0/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 700.0
+margin_right = 984.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 284, 400 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="NextSlideButton" type="Button" parent="SlideGroup/Slide0" groups=["NextSlideButton"]]
+margin_left = 361.0
+margin_top = 319.0
+margin_right = 729.0
+margin_bottom = 389.0
+text = "PROCEED TO LEVEL 0"
+
+[node name="Slide1" type="Control" parent="SlideGroup"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 400.0
+theme = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SlideGroup/Slide1"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SlideGroup/Slide1/MarginContainer"]
+margin_right = 984.0
+margin_bottom = 440.0
+
+[node name="Title" type="Label" parent="SlideGroup/Slide1/MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 3 )
+text = "Level 0: WHAT IS SUSTAINABILITY?"
+
+[node name="HSeparator" type="HSeparator" parent="SlideGroup/Slide1/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 984.0
+margin_bottom = 36.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlideGroup/Slide1/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 440.0
+custom_constants/separation = 0
+
+[node name="MainText" type="RichTextLabel" parent="SlideGroup/Slide1/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 700.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 700, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "To successfully survive outside the Earthville Apartment, you need to gather sustainability items to protect yourself and increase your knowledge power in sustainability. ​
+
+In this level 0, you will learn the basics of sustainability, including important concepts such as ecological balance, social sustainability, and environmental sustainability. ​
+
+You will tackle a total of ## missions in this level. Do not forget to collect lives, hints, and scrolls to boost up your life power and knowledge power.  ​"
+text = "To successfully survive outside the Earthville Apartment, you need to gather sustainability items to protect yourself and increase your knowledge power in sustainability. ​
+
+In this level 0, you will learn the basics of sustainability, including important concepts such as ecological balance, social sustainability, and environmental sustainability. ​
+
+You will tackle a total of ## missions in this level. Do not forget to collect lives, hints, and scrolls to boost up your life power and knowledge power.  ​"
+
+[node name="TextureRect" type="TextureRect" parent="SlideGroup/Slide1/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 700.0
+margin_right = 984.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 284, 400 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="NextSlideButton" type="Button" parent="SlideGroup/Slide1" groups=["NextSlideButton"]]
+margin_left = 730.0
+margin_top = 323.0
+margin_right = 976.0
+margin_bottom = 393.0
+text = "MOVE FORWARD"
+
+[node name="Slide2" type="Control" parent="SlideGroup"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 400.0
+theme = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SlideGroup/Slide2"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SlideGroup/Slide2/MarginContainer"]
+margin_right = 984.0
+margin_bottom = 440.0
+
+[node name="Title" type="Label" parent="SlideGroup/Slide2/MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 3 )
+text = "Level 0: WHAT IS SUSTAINABILITY?"
+
+[node name="HSeparator" type="HSeparator" parent="SlideGroup/Slide2/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 984.0
+margin_bottom = 36.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlideGroup/Slide2/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 440.0
+custom_constants/separation = 0
+
+[node name="MainText" type="RichTextLabel" parent="SlideGroup/Slide2/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 700.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 700, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = " [color=#7030A0]* Mission Possible *[/color]
+
+1. You will match the concept “sustainability” and its sub-concepts to the correct definitions and examples. ​
+
+2. You will select five most important reasons for advocating for sustainability and pursuing a sustainable lifestyle. ​
+
+3. You will identify the three pillars of sustainability and select the correct explanations of each pillar. ​"
+text = " * Mission Possible *
+
+1. You will match the concept “sustainability” and its sub-concepts to the correct definitions and examples. ​
+
+2. You will select five most important reasons for advocating for sustainability and pursuing a sustainable lifestyle. ​
+
+3. You will identify the three pillars of sustainability and select the correct explanations of each pillar. ​"
+
+[node name="TextureRect" type="TextureRect" parent="SlideGroup/Slide2/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 700.0
+margin_right = 984.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 284, 400 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="NextSlideButton" type="Button" parent="SlideGroup/Slide2" groups=["NextSlideButton"]]
+margin_left = 730.0
+margin_top = 323.0
+margin_right = 976.0
+margin_bottom = 393.0
+text = "MISSION START"
+
+[node name="Slide3" type="Control" parent="SlideGroup"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 400.0
+theme = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SlideGroup/Slide3"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SlideGroup/Slide3/MarginContainer"]
+margin_right = 984.0
+margin_bottom = 440.0
+
+[node name="Title" type="Label" parent="SlideGroup/Slide3/MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 3 )
+text = "Level 0: WHAT IS SUSTAINABILITY?"
+
+[node name="HSeparator" type="HSeparator" parent="SlideGroup/Slide3/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 984.0
+margin_bottom = 36.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlideGroup/Slide3/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 440.0
+custom_constants/separation = 0
+
+[node name="MainText" type="RichTextLabel" parent="SlideGroup/Slide3/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 700.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 700, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = " [color=#7030A0]* Sustainability *[/color]
+
+Did you know that the United Nations set up 17 sustainability goals to guide decisions of each and every country in the world in terms of environmental, economic, and social policies and practices? ​
+
+What is sustainability? Why are the United Nations and countries around the world concerned about sustainability?​"
+text = " * Sustainability *
+
+Did you know that the United Nations set up 17 sustainability goals to guide decisions of each and every country in the world in terms of environmental, economic, and social policies and practices? ​
+
+What is sustainability? Why are the United Nations and countries around the world concerned about sustainability?​"
+
+[node name="TextureRect" type="TextureRect" parent="SlideGroup/Slide3/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 700.0
+margin_right = 984.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 284, 400 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="NextSlideButton" type="Button" parent="SlideGroup/Slide3" groups=["NextSlideButton"]]
+margin_left = 730.0
+margin_top = 323.0
+margin_right = 976.0
+margin_bottom = 393.0
+text = "CHECK IT OUT"
+
+[node name="Slide4" type="Control" parent="SlideGroup"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 400.0
+theme = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SlideGroup/Slide4"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SlideGroup/Slide4/MarginContainer"]
+margin_right = 984.0
+margin_bottom = 440.0
+
+[node name="Title" type="Label" parent="SlideGroup/Slide4/MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 3 )
+text = "Level 0: WHAT IS SUSTAINABILITY?"
+
+[node name="HSeparator" type="HSeparator" parent="SlideGroup/Slide4/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 984.0
+margin_bottom = 36.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlideGroup/Slide4/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 440.0
+custom_constants/separation = 0
+
+[node name="MainText" type="RichTextLabel" parent="SlideGroup/Slide4/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 700.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 700, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[color=#7030A0]* Sustainability *[/color]
+
+Sustainability is a societal and global goal. It refers to the [color=#7030A0]ability to maintain or support a process continuously over time.[/color] Sustainability seeks to prevent the decrease of natural or physical resources, so that they will be available for the long term. 
+Sustainability is used to guide decisions at the global, national, and at the individual consumer level. We can also think of sustainability from three dimensions: the environmental, economic, and social dimension. Let’s watch a video on sustainability to learn more. 
+"
+text = "* Sustainability *
+
+Sustainability is a societal and global goal. It refers to the ability to maintain or support a process continuously over time. Sustainability seeks to prevent the decrease of natural or physical resources, so that they will be available for the long term. 
+Sustainability is used to guide decisions at the global, national, and at the individual consumer level. We can also think of sustainability from three dimensions: the environmental, economic, and social dimension. Let’s watch a video on sustainability to learn more. 
+"
+
+[node name="TextureRect" type="TextureRect" parent="SlideGroup/Slide4/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 700.0
+margin_right = 984.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 284, 400 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="NextSlideButton" type="Button" parent="SlideGroup/Slide4" groups=["NextSlideButton"]]
+margin_left = 730.0
+margin_top = 323.0
+margin_right = 976.0
+margin_bottom = 393.0
+text = "CHECK IT OUT"
+
+[node name="Slide5" type="Control" parent="SlideGroup"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 400.0
+theme = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SlideGroup/Slide5"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SlideGroup/Slide5/MarginContainer"]
+margin_right = 984.0
+margin_bottom = 440.0
+
+[node name="Title" type="Label" parent="SlideGroup/Slide5/MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 3 )
+text = "Level 0: WHAT IS SUSTAINABILITY?"
+
+[node name="HSeparator" type="HSeparator" parent="SlideGroup/Slide5/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 984.0
+margin_bottom = 36.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlideGroup/Slide5/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 440.0
+custom_constants/separation = 0
+
+[node name="MainText" type="RichTextLabel" parent="SlideGroup/Slide5/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 700.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 700, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "More info about the three pillars"
+text = "More info about the three pillars"
+
+[node name="TextureRect" type="TextureRect" parent="SlideGroup/Slide5/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 700.0
+margin_right = 984.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 284, 400 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="NextSlideButton" type="Button" parent="SlideGroup/Slide5" groups=["NextSlideButton"]]
+margin_left = 730.0
+margin_top = 323.0
+margin_right = 976.0
+margin_bottom = 393.0
+text = "CHECK IT OUT"
+
+[node name="Slide6" type="Control" parent="SlideGroup"]
+margin_right = 1024.0
+margin_bottom = 400.0
+theme = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SlideGroup/Slide6"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SlideGroup/Slide6/MarginContainer"]
+margin_right = 984.0
+margin_bottom = 440.0
+
+[node name="Title" type="Label" parent="SlideGroup/Slide6/MarginContainer/VBoxContainer"]
+margin_right = 984.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 3 )
+text = "Level 0: WHAT IS SUSTAINABILITY?"
+
+[node name="HSeparator" type="HSeparator" parent="SlideGroup/Slide6/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 984.0
+margin_bottom = 36.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlideGroup/Slide6/MarginContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 984.0
+margin_bottom = 440.0
+custom_constants/separation = 0
+
+[node name="MainText" type="RichTextLabel" parent="SlideGroup/Slide6/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 700.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 700, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[color=#7030A0]* Sustainability *[/color]
+[url=http://youtube.com/][img=500]res://scenes/apartment/images/sustainability-video-thumbnail.jpg[/img][/url]"
+text = "* Sustainability *
+"
+
+[node name="SecondaryText" type="RichTextLabel" parent="SlideGroup/Slide6/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 700.0
+margin_right = 984.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 284, 400 )
+theme = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "This video will introduce you to the basic concept of sustainability and why it is important to pursue sustainable lifestyle.
+
+[url=http://youtube.com/]Watch Video[/url]"
+text = "This video will introduce you to the basic concept of sustainability and why it is important to pursue sustainable lifestyle.
+
+Watch Video"
+
+[node name="NextSlideButton" type="Button" parent="SlideGroup/Slide6" groups=["NextSlideButton"]]
+margin_left = 730.0
+margin_top = 323.0
+margin_right = 976.0
+margin_bottom = 393.0
+text = "NEXT SLIDE"
+
+[connection signal="meta_clicked" from="SlideGroup/Slide6/MarginContainer/VBoxContainer/HBoxContainer/MainText" to="SlideGroup" method="_richtextlabel_on_meta_clicked"]
+[connection signal="meta_clicked" from="SlideGroup/Slide6/MarginContainer/VBoxContainer/HBoxContainer/SecondaryText" to="SlideGroup" method="_richtextlabel_on_meta_clicked"]

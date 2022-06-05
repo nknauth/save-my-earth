@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dr_sustain.png-58ed45e924f295227b8c8c1f50c0b30c.stex"
+path="res://.import/dr_sustain.png-a59fd3eb04416ffa7d0e7200782a6779.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/apartment/images/dr_sustain.png"
-dest_files=[ "res://.import/dr_sustain.png-58ed45e924f295227b8c8c1f50c0b30c.stex" ]
+source_file="res://characters/images/dr_sustain.png"
+dest_files=[ "res://.import/dr_sustain.png-a59fd3eb04416ffa7d0e7200782a6779.stex" ]
 
 [params]
 
