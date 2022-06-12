@@ -105,11 +105,13 @@ config/icon="res://icon.png"
 [autoload]
 
 Globals="*res://autoload/globals.gd"
+DebugMenu="*res://autoload/DebugMenu.tscn"
 EventBus="*res://autoload/event_bus.gd"
 SceneSwitcher="*res://autoload/SceneSwitcher.tscn"
 FileManager="*res://autoload/file_manager.gd"
 Screenshot="*res://autoload/screenshot.gd"
 FrameFreeze="*res://autoload/frame_freeze.gd"
+JavascriptActions="*res://autoload/javascript_actions.gd"
 
 [display]
 
@@ -207,6 +209,11 @@ dialogic_default_action={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":88,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+debug_menu={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":96,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 
